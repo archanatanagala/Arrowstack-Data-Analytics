@@ -1,0 +1,131 @@
+# ARROWSTACK DATA ANALYTICS INTERNSHIP
+
+# POWER BI SALES PERFORMANCE DASHBOARD
+
+## VALIDATION LOG
+
+Project Name: Sales Performance Dashboard
+Tool Used: Microsoft Power BI
+Datasets: Olist Brazilian E-Commerce Public Dataset and Olist Marketing Funnel Dataset
+
+
+## 1. DATA QUALITY VALIDATION
+
+* Checked column quality in Power Query Editor for selected important columns.
+* Order item price: 100% valid, with no errors or empty values observed.
+* Payment value: 100% valid, with no errors or empty values observed.
+* Order purchase timestamp: 100% valid, with no errors or empty values observed.
+* Order status: 100% valid, with no errors or empty values observed.
+* Marketing Qualified Leads mql_id: 100% valid, with no errors or empty values observed.
+* Closed Deals mql_id: 100% valid, with no errors or empty values observed.
+* Missing product categories were replaced with Unknown.
+* Missing marketing lead origins were replaced with Unknown.
+
+## 2. DUPLICATE VALIDATION
+
+* Product IDs: No duplicate IDs found.
+* Customer IDs: No duplicate IDs found.
+* Order IDs: No duplicate IDs found.
+* Repeated order IDs in order items were retained because an order can contain multiple products.
+* Repeated product IDs in order items were retained because the same product can appear in multiple orders.
+* Repeated order IDs in payment records were retained because an order can have multiple payment records.
+
+## 3. DATA TYPE VALIDATION
+
+* Order item price: Decimal Number.
+* Payment value: Decimal Number.
+* Order purchase timestamp: Date/Time.
+* Order ID: Text.
+* Marketing Qualified Leads mql_id: Text.
+* Closed Deals mql_id: Text.
+
+## 4. RELATIONSHIP VALIDATION
+
+* Checked table relationships in Power BI Model view.
+* Marketing Qualified Leads and Closed Deals were connected using mql_id.
+* The marketing relationship was configured as one-to-many (1:*).
+* Sales tables use their corresponding keys to connect orders, order items, customers, products, and payments.
+* Sales and marketing funnel data are analyzed separately because a verified lead-to-order relationship has not been established.
+
+## 5. DAX MEASURES
+
+The following measures were created:
+
+1. Total Revenue
+2. Average Order Value
+3. Total Orders
+4. Total Leads
+5. Converted Leads
+6. Conversion Rate
+
+Total Revenue is calculated using order item prices and excludes freight.
+
+Average Order Value is calculated by dividing Total Revenue by the distinct number of orders.
+
+Total Orders counts distinct order IDs.
+
+Total Leads counts distinct marketing qualified lead IDs.
+
+Converted Leads counts distinct lead IDs in the closed deals dataset.
+
+Conversion Rate is calculated by dividing Converted Leads by Total Leads.
+
+## 6. KPI CARD VALIDATION
+
+* Total Revenue KPI card: Displayed a value.
+* Average Order Value KPI card: Displayed a value.
+* Total Orders KPI card: Displayed a value.
+* Total Leads KPI card: Displayed a value.
+* Converted Leads KPI card: Displayed a value.
+* Conversion Rate KPI card: Displayed a value.
+
+## 7. CHART VALIDATION
+
+The following dashboard charts were checked:
+
+* Monthly Revenue Trend.
+* Sales by Product Category.
+* Revenue by Customer State.
+* Payment Method Analysis.
+* Marketing Funnel.
+
+## 8. SLICER VALIDATION
+
+The following slicers were tested:
+
+* Order Date slicer.
+* Product Category slicer.
+* Customer State slicer.
+* Payment Method slicer.
+
+Slicer interactions were tested on the report page. Sales slicers are not expected to filter marketing funnel visuals unless a valid relationship is established.
+
+## 9. FINAL DASHBOARD REVIEW
+
+The following items were identified for final review:
+
+* Format revenue and average order value using Brazilian reais (BRL).
+* Format conversion rate as a percentage.
+* Ensure all charts have clear titles.
+* Check number formatting and visual readability.
+* Clear slicer selections before taking the final screenshot.
+* Save the Power BI report as a PBIX file.
+* Capture a screenshot of the completed dashboard for submission.
+
+## 10. BUSINESS INSIGHT VALIDATION
+
+* Business insights should be based on actual dashboard results.
+* Product category and regional performance should be evaluated using the sales data.
+* Revenue and average order value should be interpreted using the defined measures.
+* Marketing lead conversion should be evaluated using the marketing funnel data.
+* Sales conversion claims should not be made without a verified link between leads and e-commerce orders.
+
+## 11. CONCLUSION
+
+The project validation process covered selected data quality checks, duplicate records, data types, table relationships, DAX measures, KPI cards, charts, and slicers.
+
+Valid repeated records were retained, and selected missing categorical values were replaced with Unknown.
+
+The dashboard combines sales performance analysis and marketing funnel analysis while keeping the two datasets separate where a verified relationship is unavailable.
+
+The report is ready for final review and submission after completing the remaining formatting checks, saving the PBIX file, and capturing the final dashboard screenshot.
