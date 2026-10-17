@@ -2,7 +2,7 @@
 
 #Project Overview
 
-The Operations SLA Analytics project analyzes customer support ticket data using Microsoft Power BI Desktop. The dashboard provides insights into ticket volume, resolution time, customer satisfaction, ticket status, and Service Level Agreement (SLA) breaches.
+The Operations SLA Analytics project analyzes customer support ticket data using Microsoft Power BI Desktop. The dashboard provides insights into ticket volume, resolution time, customer satisfaction, ticket status, and Service Level Agreement (SLA) breaches
 
 #Internship
 
